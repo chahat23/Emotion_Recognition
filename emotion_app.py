@@ -6,7 +6,7 @@ import speech_recognition as sr
 def wait_for_voice():
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("🎤 Say 'start' to capture emotion...")
+        print(" Say 'start' to capture emotion...")
         r.adjust_for_ambient_noise(source)
 
         while True:
@@ -16,11 +16,11 @@ def wait_for_voice():
                 print("You said:", text)
 
                 if "start" in text:
-                    print("✅ Trigger detected!")
+                    print(" Trigger detected!")
                     return True
 
             except:
-                print("❌ Could not understand, try again...")
+                print(" Could not understand, try again...")
 
 # ---------------- EMOTION DETECTION ----------------
 def detect_emotion():
